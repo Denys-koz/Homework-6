@@ -39,8 +39,8 @@ section span{
 	letter-spacing: 0.5px;
 }
 .circle{
-	width: 20px;
-	height: 20px;
+	width: 21px;
+	height: 21px;
 	display: inline-block;
 	vertical-align: top;
 	margin: 0 2px 0 10px;
@@ -144,7 +144,7 @@ header li:last-child a{
 
 .navi{ 
 	display: inline-block;
-	margin-left: 14px;
+	margin-left: 13px;
 	padding: 4px 8px 4px 3px;
 	border: 1px solid #c1c8cb;
 	border-radius: 8px;
@@ -196,6 +196,7 @@ nav a {
 	text-decoration: none;
 	color: #b1bcc0;
 	text-transform: uppercase;
+	transition: .2s;
 }
 
 nav ul li:first-child a {
@@ -213,7 +214,7 @@ nav a:hover{
 	background: -webkit-linear-gradient(top,  rgba(32,105,136,1) 0%,rgba(30,99,131,1) 13%,rgba(17,65,101,1) 61%,rgba(12,51,87,1) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom,  rgba(32,105,136,1) 0%,rgba(30,99,131,1) 13%,rgba(17,65,101,1) 61%,rgba(12,51,87,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#206988', endColorstr='#0c3357',GradientType=0 ); /* IE6-9 */
-
+	transition: .2s;
 }
 
 nav li:last-child{
@@ -264,7 +265,7 @@ nav span{
 
 aside{
 	float: left;
-	margin-top: 2px;
+	margin-top: 5px;
 }
 
 aside>ul>li{
@@ -289,7 +290,7 @@ aside>ul>li:first-child{
 }
 
 aside>ul>ul{
-	margin: 0 0 -1px 52px;
+	margin: 0 0 -2px 50px;
 }
 
 aside>ul>ul>li{
@@ -306,14 +307,14 @@ aside li a{
 	transition: .2s;
 }
 
-aside li a:hover{
+aside .catalog li a:hover{
 	text-decoration: underline;
 	font-size: 14px;
 	color: #0c3256;
 	transition: .2s;
 }
 
-aside>ul>ul>li:hover{
+aside>ul.catalog>ul>li:hover{
 	list-style-image: url('../img/li_right_hover.png');
 	transition: .2s;
 }
@@ -362,15 +363,16 @@ main{
 
 .tires{
 	float: left;
-	margin: 0 30px 21px 0;
+	margin: 0 30px 42px 0;
 }
 
-.tires div{
+.tires figure{
 	width: 136px;
 	padding: 5px 0;
 	background: #fff;
 	border: 1px solid #b0b9bc;
 	border-radius: 8px;
+	position: relative;
 }
 
 .tires img{
@@ -390,7 +392,10 @@ main{
 	color: #1f2528;
 }
 
-.tires span{
+.tires figcaption{
+	position: absolute;
+	bottom:-24px;
+	right: -12px;
 	display: inline-block;
 	width: 110%;
 	margin: 3px 0;
@@ -401,7 +406,7 @@ main{
 	color: #114165;
 }
 
-.tires span>span{
+.tires figcaption span{
 	display: inline;
 	font-style: italic;
 	font-weight: bold;
@@ -416,7 +421,72 @@ main{
 .tires:nth-child(7),
 .tires:nth-child(8),
 .tires:nth-child(9){
-	margin-bottom: 0;
+	margin-bottom: 20px;
+	margin-top: 5px;
+}
+
+.brends{
+	margin-top: 3px;
+}
+
+.brends>ul>li{
+	margin-bottom: 14px;
+	padding: 7px 0 5px 30px;
+	width: 105px;
+	margin-left: 13px;
+}
+
+.brends>ul>li:first-child{
+	font-size: 14px;
+	margin-bottom: 14px;
+	margin-left: 0;
+	padding: 5px 0 5px 30px;
+	width: 151px;
+}
+
+.brends>ul>ul>li{
+	list-style: none;
+}
+
+.brends label{
+	font-size: 13px;
+	color: #465961;
+	line-height: 25px;
+}
+
+.brends .hole{
+	position: absolute;
+	right: 109px;
+	bottom: 3px;
+}
+
+.brends>ul>li:last-child{
+	width: 65px;
+	height: 15px;
+	margin-left: 23px;
+	margin-top: 15px;
+	padding: 0 0 9px 14px;
+	background: rgb(31,103,135); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(31,103,135,1) 0%, rgba(30,99,131,1) 10%, rgba(17,65,101,1) 62%, rgba(13,52,89,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(31,103,135,1) 0%,rgba(30,99,131,1) 10%,rgba(17,65,101,1) 62%,rgba(13,52,89,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(31,103,135,1) 0%,rgba(30,99,131,1) 10%,rgba(17,65,101,1) 62%,rgba(13,52,89,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f6787', endColorstr='#0d3459',GradientType=0 ); /* IE6-9 */
+	cursor: pointer;
+	-webkit-box-shadow: 3px 4px 3px 0px rgba(191,191,191,0.75);
+	-moz-box-shadow: 3px 4px 3px 0px rgba(191,191,191,0.75);
+	box-shadow: 3px 4px 3px 0px rgba(191,191,191,0.75);
+	border-radius: 10px;
+}
+
+.brends>ul>li:last-child a{
+	font-family: ArialMT;
+	font-size: 11px;
+	color: #e5e9ea;
+	letter-spacing: 0.5px;
+}
+
+.brends>ul>ul{
+	margin: -11px 0 8px 21px;
 }
 
 .clearfix:after{
@@ -427,14 +497,17 @@ main{
 
 .brandlogo{
 	width: 910px;
-	margin: 30px auto;
+	margin: 38px auto 23px;
 	text-align: center;
 }
 
+
+
 footer{
 	width: 910px;
-	height: 100px;
+	height: 78px;
 	margin: 0 auto;
+	padding: 11px 0;
 	background: #213a4d;
 	font-family: ArialMT;
 }
@@ -442,6 +515,7 @@ footer{
 footer ul{
 	width: 300px;
 	margin: 0 auto;
+	font-size: 0;
 }
 
 footer ul li{
@@ -449,15 +523,36 @@ footer ul li{
 }
 
 footer ul li a{ 
+	display: inline-block;
+	padding: 0 13px 0 13px;
 	text-decoration: none;
 	font-size: 12px;
 	color: #bec6c9;
+	border-left: 1px solid #8d989f;
+	border-right: 1px solid #7a878f;
+	transition: .2s;
+}
+
+footer ul li a:hover{
+	color: #52abcb;
+	transition: .2s;
+}
+
+footer ul li:first-child a{ 
+	border-left: none;
+	padding-left: 5px;
+}
+
+footer ul li:last-child a{ 
+	padding-right: 0;
+	border-left: 1px solid #afb7bc;
+	border-right: none;
 }
 
 footer span{
 	display: block;
-	margin: 0 auto;
-	width: 200px;
+	margin: 17px auto;
+	width: 151px;
 	font-size: 10px;
 	color: #7f4740;
 }
