@@ -14,7 +14,7 @@
 }
 
 body {
- 	font-family: 'Lucida Sans Unicode';
+ 	font-family: 'Lucida Sans Unicode', sans-serif;
   	font-size:14px;
   	background: #fff;
 }
@@ -43,7 +43,7 @@ section span{
 	height: 21px;
 	display: inline-block;
 	vertical-align: top;
-	margin: 0 2px 0 10px;
+	margin: -2px 2px 0 9px;
 	border-radius: 50%;
 	background: rgb(12,50,86); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(12,50,86,1) 0%, rgba(18,67,103,1) 50%, rgba(30,100,132,1) 100%); /* FF3.6-15 */
@@ -65,7 +65,7 @@ header form{
 
 header ul{
 	height: 25px;
-	margin: 18px 0 10px;
+	margin: 16px 0 12px;
 	font-size: 0;
 	border-radius: 4px;
 	-webkit-box-shadow: 2px 3px 5px rgba(89,109,128,1);
@@ -81,29 +81,33 @@ header ul{
 
 header li{ 
 	display: inline-block;
-	vertical-align: center; 
-	margin: 3px 0 4px;
+	vertical-align: middle; 
+	margin: 4px 0;
 }
 
 header li img{
-	vertical-align: bottom;
+	vertical-align: top;
 	margin: 0 3px 0 7px;
 }
 
 [type="text"]{
-	margin-right: 6px;
+	margin-right: 8px;
+	width: 99px;
+	height: 12px;
+	font-size: 11px;
+	border: 1px solid #dee0e0;
+	padding: 1px 9px 2px 4px;
+	letter-spacing: 0.5px;
 }
 
-
-
-[type="text"],
 [type="password"]{
 	width: 100px;
 	height: 12px;
 	font-size: 11px;
-	line-height: 25;
 	border: 1px solid #dee0e0;
-	padding: 0 8px 3px 5px;
+	padding: 0 8px 2px 4px;
+	letter-spacing: 0.25px;
+	margin-bottom: 1px;
 }
 
 
@@ -120,51 +124,76 @@ header li>a{
 	color: white;
 }
 
-[onClick="form.submit()"]{
-	height: 12px;
-	padding: 0 3px 0 7px;
+header [type="submit"]{
+	font-size: 11px;
+	color: white;
+	letter-spacing:0.25px;
+	line-height: 10px;
+	border: none;
+	background: none;
+	height: 10px;
+	padding: 0 4px 0 8px;
 	border-right: 1px solid #4b6882;
+	cursor: pointer;
 }
 
 
 header li:nth-child(4) a{
-	height: 12px;
-	padding-left: 4px;
+	height: 10px;
+	padding-left: 5px;
 	margin-right: 19px;
+	letter-spacing: -0.25px;
 	border-left: 1px solid #d3d9de;
 }
 
-header li:last-child a{
+header li:last-child span{
+	display: inline-block;
+	height: 12px;
 	font-size: 12px;
 	color: #bfbfbf;
-	text-decoration: underline;
 	margin-right: 10px;
-	padding-bottom: 1px;
+	padding: 2px 0 0 2px;
+	border-bottom: 1px solid #7c8794;
 }
 
 .navi{ 
 	display: inline-block;
-	margin-left: 13px;
-	padding: 4px 8px 4px 3px;
+	vertical-align: middle;
+	margin: 7px 0 0 13px;
+	padding: 2px 8px 3px 4px;
 	border: 1px solid #c1c8cb;
-	border-radius: 8px;
+	border-radius: 10px;
 	-webkit-box-shadow: 0px 0px 2px 0px rgba(89,109,128,0.75);
 	-moz-box-shadow: 0px 0px 2px 0px rgba(89,109,128,0.75);
 	box-shadow: 0px 0px 2px 0px rgba(89,109,128,0.75);
 	font-size: 0;
+	position: relative;
 }
 
 .navi a{
-	display: inline-block;
+	display: block;
+	float:left;
 	text-decoration: none;
-	margin: 0 4px;
+	height: 11px;
+	margin: 0 4px 0;
+}
+
+.navi a:nth-child(2){
+	padding-top: 2px;
+}
+
+.navi a:last-child{
+	padding-top: 3px;
+	margin-left: 5px;
 }
 
 header>img{
-	display: block;
+	display: inline-block;
+	vertical-align: bottom;
 	margin: 0 auto;
 }
 
+/*------------------------------Menu------------------------------*/
 nav{
 	width: 911px;
 	margin: 6px auto;
@@ -224,22 +253,28 @@ nav li:last-child{
 nav span{
 	display: inline-block;
 	vertical-align: top;
-	padding: 0 3px 0 3px;
+	padding: 1px 3px 0 3px;
 	font-family: ArialMT;
 	font-size: 11px;
+	letter-spacing: 0.25px;
 	color: #929b9f;
+}
+
+nav span:last-child{
+	letter-spacing: 0.5px;
 }
 
 .kol{
 	font-size: 12px;
 	color: #0d5a8f;
 	position: relative;
+	margin-top: -1px;
 }
 
 .kol:before{
 	content:""; 
   	position: absolute;
-  	bottom: -3px;
+  	bottom: -2px;
    	right: 67px;
    	width: 21px;
    	height: 17px;
@@ -247,11 +282,11 @@ nav span{
 }
 
 .summ{
-	margin-left: 9px;
+	margin: -1px 0 0 7px;
 	font-size: 12px;
 	color: #0d5a8f;
 }
-
+/*--------------------------------------------------------------------------------------*/
 .find{
 	width: 910px;
 	height: 135px;
@@ -263,12 +298,17 @@ nav span{
 	margin: 0 auto;
 }
 
+/*----------------------------------------Left aside-----------------------------------*/
 aside{
 	float: left;
-	margin-top: 5px;
+	margin-top: 4px;
 }
 
 aside>ul>li{
+	position: relative;
+}
+
+aside>ul>li>span{
 	display: block;
 	border: 1px solid #8b979c;
 	border-radius: 14px;
@@ -276,34 +316,36 @@ aside>ul>li{
 	color: #114165;
 	padding: 8px 0 5px 31px;
 	width: 119px;
-	position: relative;
+	
 }
 
-aside>ul>li:first-child{
+aside>ul>li:first-child span{
 	font-size: 13px;
-	margin-bottom: 12px;
-	padding: 6px 0 6px 25px;
+	letter-spacing: -0.15px;
+	margin-bottom: 13px;
+	padding: 6px 0 6px 27px;
 	width: 156px;
 	-webkit-box-shadow: 0px 3px 3px 0px rgba(191,191,191,0.75);
 	-moz-box-shadow: 0px 3px 3px 0px rgba(191,191,191,0.75);
 	box-shadow: 0px 3px 3px 0px rgba(191,191,191,0.75);
 }
 
-aside>ul>ul{
-	margin: 0 0 -2px 50px;
+aside>ul ul{
+	margin: 0 0 -2px 52px;
 }
 
-aside>ul>ul>li{
+aside>ul ul>li{
 	list-style-image: url('../img/li_right_shape.png');
 	transition: .2s;
 }
 
 aside li a{
+	margin-left: -4px;
 	text-decoration: none;
 	font-size: 13px;
 	color: #465961;
 	line-height: 25px;
-	letter-spacing: -0.5px;
+	letter-spacing: -0.15px;
 	transition: .2s;
 }
 
@@ -314,14 +356,14 @@ aside .catalog li a:hover{
 	transition: .2s;
 }
 
-aside>ul.catalog>ul>li:hover{
+aside>ul.catalog ul>li:hover{
 	list-style-image: url('../img/li_right_hover.png');
 	transition: .2s;
 }
 
 aside .circle{
 	position: absolute;
-	right: 156px;
+	right: 158px;
 	bottom: 3px;
 }
 
@@ -334,8 +376,8 @@ aside .hole{
 	height: 22px;
 	margin: 0;
 	position: absolute;
-	right: 123px;
-	bottom: 3px;
+	right: 157px;
+	bottom: 104px;
 }
 
 .hole div{
@@ -347,11 +389,12 @@ aside .hole{
 	margin: 5px 0 0 5px;
 }
 
+/*-----------------------------------Main-----------------------------------*/
 main{
 	float: left;
 	width: 475px;
 	padding: 15px 30px 30px 22px;
-	margin: 0 9px;
+	margin: 0 9px 0 7px;
 	border-radius: 3px;
 	background: rgb(229,231,232); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(229,231,232,1) 0%, rgba(219,224,226,1) 14%, rgba(186,198,203,1) 44%, rgba(168,183,190,1) 65%, rgba(155,173,181,1) 83%, rgba(147,167,176,1) 100%); /* FF3.6-15 */
@@ -363,7 +406,7 @@ main{
 
 .tires{
 	float: left;
-	margin: 0 30px 42px 0;
+	margin: 2px 30px 43px 0;
 }
 
 .tires figure{
@@ -384,12 +427,17 @@ main{
 	text-align: center;
 	font-size: 15px;
 	color: #206988;
+	letter-spacing: 0.15px;
+	line-height: 13px;
 }
 
 .tires h3{
 	text-align: center;
 	font-size: 13px;
 	color: #1f2528;
+	letter-spacing: -0.15px;
+	line-height: 13px;
+	margin: 0 0 1px 7px;
 }
 
 .tires figcaption{
@@ -402,41 +450,61 @@ main{
 	text-align: center;
 	font-family: Arial;
 	font-weight: bold;
+	font-style: italic;
+	letter-spacing: 0.25px;
 	font-size: 16px;
 	color: #114165;
 }
 
 .tires figcaption span{
-	display: inline;
-	font-style: italic;
-	font-weight: bold;
 	font-size: 12px;
-	color: #114165;
+
 }
 
 .tires:nth-child(3n){
 	margin-right: 0;
 }
 
+.tires:nth-child(3n) h2{
+	margin-left: 5px;
+}
+
+.tires:nth-child(3n) h3{
+	margin-left: 0;
+}
+
 .tires:nth-child(7),
 .tires:nth-child(8),
 .tires:nth-child(9){
-	margin-bottom: 20px;
-	margin-top: 5px;
+	margin-bottom: 18px;
+	margin-top: 4px;
 }
 
+.tires:nth-child(2) h2,
+.tires:nth-child(5) h2,
+.tires:nth-child(8) h2{
+	margin-left: 5px;
+}
+
+.tires:nth-child(2) h3,
+.tires:nth-child(5) h3,
+.tires:nth-child(8) h3{
+	margin-left: 5px;
+}
+
+/*-----------------------------------Right aside---------------------------------*/
 .brends{
-	margin-top: 3px;
+	margin-top: 2px;
 }
 
-.brends>ul>li{
+.brends>ul>li span{
 	margin-bottom: 14px;
 	padding: 7px 0 5px 30px;
 	width: 105px;
 	margin-left: 13px;
 }
 
-.brends>ul>li:first-child{
+.brends>ul>li:first-child span{
 	font-size: 14px;
 	margin-bottom: 14px;
 	margin-left: 0;
@@ -444,28 +512,46 @@ main{
 	width: 151px;
 }
 
-.brends>ul>ul>li{
+.brends>ul ul>li{
 	list-style: none;
 }
 
 .brends label{
+	margin-left: 2px;
 	font-size: 13px;
 	color: #465961;
 	line-height: 25px;
 }
 
-.brends .hole{
-	position: absolute;
-	right: 109px;
+.brends .circle{
+	right: 156px;
 	bottom: 3px;
 }
 
-.brends>ul>li:last-child{
-	width: 65px;
-	height: 15px;
-	margin-left: 23px;
-	margin-top: 15px;
-	padding: 0 0 9px 14px;
+.brends .hole{
+	right: 142px;
+	bottom: 80px;
+}
+
+.brends>ul>li:nth-child(3) .hole{
+	right: 144px;
+	bottom: 83px;
+}
+
+.brends>ul>li:nth-child(3) ul{
+	margin-top: -8px;
+}
+
+.brends>ul>li:last-child input{
+	width: 82px;
+	margin: 5px 0 0 23px;
+	padding: 7px 0 7px 1px;
+	font-family: ArialMT;
+	font-size: 11px;
+	color: #e5e9ea;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	border: none;
 	background: rgb(31,103,135); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(31,103,135,1) 0%, rgba(30,99,131,1) 10%, rgba(17,65,101,1) 62%, rgba(13,52,89,1) 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top,  rgba(31,103,135,1) 0%,rgba(30,99,131,1) 10%,rgba(17,65,101,1) 62%,rgba(13,52,89,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -478,14 +564,9 @@ main{
 	border-radius: 10px;
 }
 
-.brends>ul>li:last-child a{
-	font-family: ArialMT;
-	font-size: 11px;
-	color: #e5e9ea;
-	letter-spacing: 0.5px;
-}
 
-.brends>ul>ul{
+
+.brends>ul ul{
 	margin: -11px 0 8px 21px;
 }
 
@@ -501,8 +582,21 @@ main{
 	text-align: center;
 }
 
+.brandlogo li{
+	display: inline-block;
+}
 
+.brandlogo a{
+	display: inline-block;
+	padding: 4px 4px 0 5px;
+	vertical-align: top;
+}
 
+.brandlogo li:nth-child(6) a{
+	padding: 0 4px 0 5px;
+}
+
+/*------------------------------------Footer-----------------------------------*/
 footer{
 	width: 910px;
 	height: 78px;
@@ -513,7 +607,7 @@ footer{
 }
 
 footer ul{
-	width: 300px;
+	width: 305px;
 	margin: 0 auto;
 	font-size: 0;
 }
@@ -524,13 +618,14 @@ footer ul li{
 
 footer ul li a{ 
 	display: inline-block;
-	padding: 0 13px 0 13px;
+	padding: 0 11px 0 12px;
 	text-decoration: none;
 	font-size: 12px;
 	color: #bec6c9;
 	border-left: 1px solid #8d989f;
 	border-right: 1px solid #7a878f;
 	transition: .2s;
+	letter-spacing: 0.25px;
 }
 
 footer ul li a:hover{
@@ -540,10 +635,11 @@ footer ul li a:hover{
 
 footer ul li:first-child a{ 
 	border-left: none;
-	padding-left: 5px;
+	padding-left: 8px;
 }
 
 footer ul li:last-child a{ 
+	padding-left: 16px;
 	padding-right: 0;
 	border-left: 1px solid #afb7bc;
 	border-right: none;
@@ -552,7 +648,8 @@ footer ul li:last-child a{
 footer span{
 	display: block;
 	margin: 17px auto;
-	width: 151px;
+	width: 155px;
 	font-size: 10px;
 	color: #7f4740;
+	letter-spacing: 0.25px;
 }
